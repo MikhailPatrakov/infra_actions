@@ -54,9 +54,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          run: |
-            sudo docker login -u mikhailpatrakov
-            Mihail1132
           script: |
             sudo docker pull mikhailpatrakov/infra_actions
             sudo docker stop $(sudo docker ps -a -q)
