@@ -60,7 +60,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: deploy    
-        script: |
+        run: |
           sudo docker pull mikhailpatrakov/infra_actions
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 mikhailpatrakov/infra_actions
